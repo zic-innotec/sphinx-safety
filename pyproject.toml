@@ -1,0 +1,31 @@
+[project]
+name = "sphinx-safety"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Daniel Woste", email = "daniel.woste@useblocks.com" }
+]
+dependencies = [
+    "sphinx[test]>=8.2.3",
+    "sphinx-needs[plotting]>=5.1.0",
+    "sphinxcontrib-plantuml>=0.30",
+    "sphinx-design>=0.6.1",
+    "sphinx-simplepdf>=1.6.0",
+    "furo>=2024.8.6",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sphinx_safety"]
