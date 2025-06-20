@@ -1,7 +1,7 @@
 [project]
 name = "sphinx-safety"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sphinx Classification documentation"
 authors = [
     { name = "Daniel Woste", email = "daniel.woste@useblocks.com" }
 ]
@@ -14,7 +14,7 @@ dependencies = [
     "furo>=2024.8.6",
 ]
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.11"
 
 [build-system]
 requires = ["hatchling"]
