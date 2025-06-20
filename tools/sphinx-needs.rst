@@ -2,7 +2,7 @@ Sphinx-Needs
 ============
 
 .. tool:: Sphinx-Needs
-   :id: TOOL_SPHINX-NEEDS
+   :id: TOOL_SN
    :version: 5.1.0, 4.2.0
    :status: in_progress
 
@@ -55,7 +55,7 @@ Features
 
 .. feature:: Read Traceability objects in Sphinx-Needs
    :id: FE_SN_READ
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    Read Traceability objects from rst/md files into the internal storage.
 
@@ -97,7 +97,7 @@ Features
 
 .. feature:: Display Traceability objects content in Sphinx-Needs
    :id: FE_SN_CONTENT_RENDER
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Content contains syntax errors
       :id: ER_SN_CONTENT_SYNTAX
@@ -105,7 +105,7 @@ Features
 
 .. feature:: Assign meta-data to Traceability objects in Sphinx-Needs
    :id: FE_SN_SET_META
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Dynamic functions return invalid meta-data
       :id: ER_SN_DYN_INVALID
@@ -132,7 +132,7 @@ Features
 
 .. feature:: Establish links between Traceability objects in Sphinx-Needs
    :id: FE_SN_LINK
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Back-links are not set
       :id: ER_SN_LINKS_NO_BACK
@@ -166,7 +166,7 @@ Features
 
 .. feature:: Generate object representation in Sphinx-Needs
    :id: FE_SN_DOCTREE
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Meta-data missing
       :id: ER_SN_LAY_META_MIS
@@ -183,7 +183,7 @@ Features
 
 .. feature:: Export needs.json file using Sphinx-Needs
    :id: FE_SN_JSON
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Objects missing in needs.json
       :id: ER_SN_JSON_MIS
@@ -198,7 +198,7 @@ Dynamic Content
 
 .. feature:: Apply dynamic functions for meta-data computation
    :id: FE_SN_DYN_FUNC
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
    .. error:: Function gets not executed
       :id: ER_SN_DYN_NO_EXEC
@@ -221,26 +221,26 @@ Dynamic Content
 
 .. feature:: Extend page content with templates in Sphinx-Needs
    :id: FE_SN_TEMPLATE_PAGE
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
 .. feature:: Enhance Need content using templates in Sphinx-Needs
    :id: FE_SN_TEMPLATE_NEED
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
 Analysis
 ~~~~~~~~
 
 .. feature:: Display filtered Need objects in a table format
    :id: FE_SN_TABLE
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
 .. feature:: Visualize filter results with a pie chart
    :id: FE_SN_PIE
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
 .. feature:: Output filter results as a numeric value in text
    :id: FE_SN_COUNT
-   :tools: TOOL_SPHINX-NEEDS
+   :tools: TOOL_SN
 
 Restrictions
 ------------

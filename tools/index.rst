@@ -7,5 +7,7 @@
 
    sphinx
    sphinx-needs
+   sphinx-test-reports
    ubc
    ubcode
+   ubtrace

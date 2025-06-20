@@ -48,7 +48,6 @@ extra_options = [
     "risklevel",
     "version",
     "ti",
-    "ti_argu",
     "td",
     "tcl",
     "priority",

@@ -6,12 +6,11 @@
    :status: done
    :inputs: 
    :outputs:
-   :tools: TOOL_SPHINX, TOOL_SPHINX-NEEDS, TOOL_UBC
+   :tools: TOOL_SPHINX, TOOL_SN, TOOL_UBC
    :features: 
       FE_SPHINX_READ, FE_SN_READ, FE_SN_CONTENT_RENDER, FE_SN_SET_META, FE_SN_LINK, FE_SN_TABLE,
       FE_SN_PIE, FE_SN_COUNT
    :ti: 2
-   :ti_argu: Safety reasons
    :priority: 1
    :responsible:
    
@@ -24,7 +23,7 @@
 .. usecase:: Document SW architecture
    :id: UC_SW_ARCH
    :outputs: 
-   :tools: TOOL_SPHINX, TOOL_SPHINX-NEEDS
+   :tools: TOOL_SPHINX, TOOL_SN
    :features: 
    :ti: 2
    
@@ -35,7 +34,7 @@
 .. usecase:: Document SW Detail Design (SW API)
    :id: UC_SW_API
    :outputs: 
-   :tools: TOOL_SPHINX, TOOL_SPHINX-NEEDS
+   :tools: TOOL_SPHINX, TOOL_SN
    :features: 
    :ti: 2
    
@@ -47,7 +46,7 @@
    :id: UC_SW_QA
    :inputs: 
    :outputs:
-   :tools: TOOL_SPHINX, TOOL_SPHINX-NEEDS
+   :tools: TOOL_SPHINX, TOOL_SN
    :features: 
    :ti: 2
    
@@ -58,7 +57,7 @@
 .. usecase:: Document SW Unit test cases and results
    :id: UC_UNIT_TEST
    :outputs: 
-   :tools: TOOL_SPHINX, TOOL_SPHINX-NEEDS
+   :tools: TOOL_SPHINX, TOOL_SN
    :features: 
    :ti: 2
    

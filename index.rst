@@ -69,6 +69,31 @@ of Sphinx + Sphinx-Needs for the following standards:
 * **Agriculture**: `ISO 25119 <https://en.wikipedia.org/wiki/ISO_25119>`__
 * Others can be added on request or by a Pull request.
 
+Tool Scope
+----------
+The Classification and Qualification documentation have the following tools in their scope:
+
+.. needtable::
+   :filter: type == "tool"
+   :style: table
+   :columns: title, id, version, status
+   :colwidths: 30,30,20,20
+
+Please be aware that this classification does not cover **all features** of a tool.
+Instead it is concentrating on the safety-relevant use cases only, so that a 
+Tool Confidence Level (TCL) is not given for a tool, but for a use case.
+
+Use case Scope
+--------------
+
+.. needtable::
+   :filter: type == "usecase"
+   :style: table
+   :columns: id, title, ti as "TI", tcl as "TCL"
+   :colwidths: 30,30,20,20
+
+
+
 .. toctree::
    :maxdepth: 1
    :hidden:
