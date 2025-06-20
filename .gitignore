@@ -11,3 +11,4 @@ wheels/
 .python-version
 _build
 .report.json
+.vscode
