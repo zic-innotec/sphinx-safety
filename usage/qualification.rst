@@ -28,6 +28,29 @@ Qualification documentation to create a comprehensive report.
 To obtain a Sphinx Qualification Kit, please contact `Innotec GmbH <https://innotecsafety.com/>`__
 or `useblocks GmbH <https://useblocks.com>`__.
 
+Showcase
+--------
+
+.. grid:: 2
+
+  .. grid-item::
+
+     .. figure:: /_static/qualification_kit_website_1.png
+        :width: 99%
+        :align: center
+
+        Imported test cases of Sphinx 
+  
+  .. grid-item::
+
+     .. figure:: /_static/qualification_kit_website_2.png
+        :width: 99%
+        :align: center
+
+        Defined checks for Sphinx
+      
+
+
 Qualification Method
 --------------------
 
