@@ -96,7 +96,7 @@ html_theme_options = {
     "source_repository": "https://github.com/useblocks/sphinx-safety",
     "source_branch": "main",
     "source_directory": "/",
-    "light_logo": "logo_classification_sn_2.svg",
-    "dark_logo": "logo_classification_sn_light_2.svg",
+    "light_logo": "logo_sphinx_classification_light.svg",
+    "dark_logo": "logo_sphinx_classification_dark.svg",
 }
 html_css_files = ["custom.css"]
