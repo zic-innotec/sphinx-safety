@@ -52,21 +52,6 @@ Also checks needed for a final qualification are part of ``ubCode``.
 :vendor: `useblocks GmbH <https://useblocks.com>`__
 :website: https://ubcode.useblocks.com
 
-Consultancy support
--------------------
-
-Innotec
-~~~~~~~
-
-innotec GmbH, a member of the TÜV Austria Group, is a German
-consultancy specializing in functional safety across various sectors,
-including automotive, machinery, and embedded systems. Their expertise
-encompasses comprehensive support for tool qualification and
-validation, ensuring compliance with standards such as ISO 26262, IEC
-61508, and EN 50128.
-
-:website: https://innotecsafety.com/
-
 Terms
 -----
 

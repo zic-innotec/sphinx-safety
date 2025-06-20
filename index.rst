@@ -14,12 +14,12 @@ Introduction
 
       .. div:: sd-font-weight-bold
 
-         Classification for  Sphinx + X
+         Classification for Sphinx + X
 
       .. div:: sd-fs-5 sd-font-italic
 
          Qualify your Sphinx-based documentation toolchain for safety audits
-         requested by ISO 26262, IEC 61508, EN 50716, and more.
+         required by ISO 26262, IEC 61508, EN 50716, and more.
 
       .. grid:: 1 1 2 2
          :gutter: 2 2 3 3
@@ -47,31 +47,44 @@ Introduction
 
                Qualification Support
 
-This documentation provides the needed information to get a
-"qualification readiness" in any Sphinx-based project. It provides ``use cases``,
-``features``, ``errors`` and ``restrictions`` as `Sphinx-Needs <https://sphinx-needs.com>`__
+This documentation provides the necessary information to achieve
+"qualification readiness" for any Sphinx-based project. It includes ``use cases``,
+``features``, ``errors``, and ``restrictions`` represented as `Sphinx-Needs <https://sphinx-needs.com>`__
 objects.
 
-The classification is the basement for any qualification, which is
-also covered by a commercial package provided by `useblocks <https://useblocks.com>`__
+The classification serves as the foundation for any qualification
+process. Additional qualification support is available through a
+commercial :ref:`qualification` provided by `useblocks <https://useblocks.com>`__
 and `Innotec <https://innotecsafety.com/>`__.
 
-Supported standards
+.. hint::
+
+   **Project Status**
+
+   This documentation is in its early stages. Tools and data are
+   currently being collected and classified. Contributions are welcome!
+   Visit our GitHub repository at https://github.com/useblocks/sphinx-safety/
+   to join as a user or contributor.
+
+Supported Standards
 -------------------
 
-This documentation provides needed information for the Classifications
-of Sphinx + Sphinx-Needs for the following standards:
+This documentation provides essential information for the
+classification of Sphinx and Sphinx-Needs according to the following
+standards:
 
 * **Automotive**: `ISO 26262 <https://en.wikipedia.org/wiki/ISO_26262>`__
 * **Automation, Industrial**: `IEC 61508 <https://en.wikipedia.org/wiki/IEC_61508>`__
 * **Railway**: `EN 50716 <https://www.dinmedia.de/de/norm/din-en-50716/378381071>`__
 * **Medical**: `IEC 62304 <https://en.wikipedia.org/wiki/IEC_62304>`__
 * **Agriculture**: `ISO 25119 <https://en.wikipedia.org/wiki/ISO_25119>`__
-* Others can be added on request or by a Pull request.
+* Additional standards can be added upon request or via a pull request.
 
 Tool Scope
 ----------
-The Classification and Qualification documentation have the following tools in their scope:
+
+The classification and qualification documentation cover the following
+tools:
 
 .. needtable::
    :filter: type == "tool"
@@ -79,20 +92,54 @@ The Classification and Qualification documentation have the following tools in t
    :columns: title, id, version, status
    :colwidths: 30,30,20,20
 
-Please be aware that this classification does not cover **all features** of a tool.
-Instead it is concentrating on the safety-relevant use cases only, so that a 
-Tool Confidence Level (TCL) is not given for a tool, but for a use case.
+Please note that this classification does not cover **all features**
+of a tool. It focuses exclusively on safety-relevant use cases. As a
+result, a Tool Confidence Level (TCL) is assigned to individual use
+cases rather than the tool as a whole.
 
-Use case Scope
+Use Case Scope
 --------------
 
 .. needtable::
    :filter: type == "usecase"
    :style: table
    :columns: id, title, ti as "TI", tcl as "TCL"
-   :colwidths: 30,30,20,20
+   :colwidths: 20,40,20,20
 
+Support
+-------
 
+.. grid:: 2
+
+   .. grid-item-card:: useblocks
+      :link: https://useblocks.com
+      :class-card: ubcard
+
+      Tool Support
+      ^^^
+      useblocks GmbH is a German solution provider specializing in documentation tools for
+      software development teams, with a strong focus on the "docs-as-code" methodology.
+      Their expertise lies in integrating documentation seamlessly into development workflows,
+      enabling teams to treat documentation as an integral part of their codebase.
+      This approach ensures consistency, version control, and collaboration across teams.
+
+      +++
+      .. image:: https://useblocks.com/_static/useblocks_white.svg
+        :align: center
+        :height: 50px
+
+   .. grid-item-card:: innotec
+      :link: https://innotecsafety.com/
+      :class-card: ubcard
+
+      Consultancy Support
+      ^^^
+      innotec GmbH, a member of the TÜV Austria Group, is a German consultancy specializing in functional safety across various sectors, including automotive, machinery, and embedded systems. Their expertise encompasses comprehensive support for tool qualification and validation, ensuring compliance with standards such as ISO 26262, IEC 61508, and EN 50128.
+
+      +++
+      .. image:: https://innotecsafety.com/wp-content/uploads/2024/10/innotec-logo-tuv-austria-group-e1728416243598-1.png
+         :align: center
+         :height: 50px
 
 .. toctree::
    :maxdepth: 1
@@ -109,7 +156,7 @@ Use case Scope
    :maxdepth: 1
    :hidden:
    :caption: Classification Data
-   
+
    use_cases/index
    tools/index
    analysis/index
