@@ -95,7 +95,7 @@ html_theme_options = {
     "top_of_page_buttons": ["view", "edit"],
     "source_repository": "https://github.com/useblocks/sphinx-safety",
     "source_branch": "main",
-    "source_directory": "classification/",
+    "source_directory": "/",
     "light_logo": "logo_classification_sn_2.svg",
     "dark_logo": "logo_classification_sn_light_2.svg",
 }

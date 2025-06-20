@@ -15,8 +15,8 @@ Prerequirement: Python and Rye must be installed
 #. ``cd sphinx-safety``
 #. ``rye init``, this will create a virtuakl Python environment and
    installs all needed dependencies.
-#. Build the docs via ``rye run sphinx-build -a -E -b html docs docs/_build/html``.
-#. Open ``docs/_build/html/index.html`` with your browser of choice.
+#. Build the docs via ``rye run sphinx-build -a -E -b html . _build/html``.
+#. Open ``_build/html/index.html`` with your browser of choice.
 
 Usage
 -----
