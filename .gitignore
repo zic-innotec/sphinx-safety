@@ -12,3 +12,4 @@ wheels/
 _build
 .report.json
 .vscode
+*.bkp
