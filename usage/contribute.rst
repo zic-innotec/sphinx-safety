@@ -3,83 +3,159 @@
 :octicon:`people` Contribute
 ============================
 
-Basic principals
-----------------
+Basic Principles
+-----------------
 
-1. Only validate relevant use cases.
-#. If tool error negligible compared to human error, no need for
-   validation.​
-#. Use comparison of diverse tools as argumentation.​
-#. Re-use community tests as far as reasonable.​
-#. There is no such thing like “proven in use” for newer versions.​
+1. Validate only relevant use cases.
+2. If a tool error is negligible compared to human error, validation is not required.
+3. Use comparisons between diverse tools as part of the argumentation.
+4. Reuse community tests wherever reasonable.
+5. There is no such thing as "proven in use" for newer tool versions.
 
-Classi & Qualification Model
-----------------------------
+Classification & Qualification Model
+------------------------------------
 
-This flow chart gives an overview about all available Sphinx-Needs
-types and their linking.
+The following flowchart provides an overview of all available Sphinx-Needs types and their relationships.
+
+.. image:: /_static/sphinx-safety_classi_qualification.drawio.png
+   :align: center
+   :scale: 99%
+
+This classification documentation focuses on the blue elements:
+
+* Use cases
+* Features
+* Errors
+* Restrictions
+* Tools
+
+The remaining elements are part of the :ref:`qualification`.
+
+An example of this data model with real elements is shown below:
 
 .. image:: /_static/contribute_model_example.png
    :align: center
 
-Reusing docs
-------------
+Each Sphinx-Needs object has several attributes, as illustrated in the following class diagram.
+
+Calculated attributes are marked with a red square, while manual ones are marked with a green circle.
 
 .. uml::
-   :align: center
 
-   node "Safety classification docs" as safety #0fbcf9
-   card "needs.json" as json
-   card "HTML-Page" as page
-   node "Project X docs" as x #FF6666
-   node "Project Y docs" as y #6666FF
+   class "Use Case" as uc {
+      __Defaults__
+      +title: string
+      +id: string
+      +content: string
+      +status: string
+      __Specific__
+      +TI: integer
+      -TCL: integer
+      ..Links..
+      +tools <<tool>>
+      +features <<feature>>
+      +inputs <<artifact>>
+      +outputs <<artifact>>
+   }
 
-   safety --> page
-   safety --> json
+   class "Tool" as to {
+      __Defaults__
+      +title: string
+      +id: string
+      +content: string
+      +status: string
+      __Specific__
+      +version: string
+   }
 
-   json --> x : needimport
-   json --> y : needimport
+   class "Feature" as fe {
+      __Defaults__
+      +title: string
+      +id: string
+      +content: string
+      +status: string
+      __Specific__
+      -TD: integer
+      ..Links..
+      +tools <<tool>>
+      -child needs <<error>>
+      +inputs <<artifact>>
+      +outputs <<artifact>>
+   }
+   
+   class "Error" as er {
+      __Defaults__
+      +title: string
+      +id: string
+      +content: string
+      +status: string
+      __Specific__
+      +TD: integer
+   }
 
-TI, TD and TCL values
----------------------
+   class "Restriction" as re {
+      __Defaults__
+      +title: string
+      +id: string
+      +content: string
+      +status: string
+      __Specific__
+      ..Links..
+      +avoids <<error>>
+   }
 
-The **Tool Impact (TI)** value is assigned at the ``use case`` level
-and indicates whether the ``use case`` has a safety-relevant impact. A
-value of **2** signifies a safety-relevant impact, while **1**
-indicates no safety relevance.
+   uc -> fe
+   fe --> er
+   re --> er
+   uc --> to
+   fe --> to
 
-The **Tool Error Detection (TD)** value must be defined for each ``error``
-and represents the ability to detect the error. Detection can be
-performed either technically or manually through reviews. A value of **1**
-means the error is detected, while **3** indicates the error is not
-detected. The value **2** is not used in this document.
+Extend Documentation
+--------------------
 
-The final **Tool Confidence Level (TCL)** is calculated as follows: -
-If **TI** is **1**, the **TCL** is also **1**, and no further actions
-are required for tool qualification. - If **TI** is **2**, the highest
-**TD** value among all linked, safety-relevant features and its errors is used to
-determine the **TCL**.
+For this documentation, the workflow described in :ref:`usage` is the preferred approach.
 
-A ``use case`` with a **TCL** of **2** or **3** requires special
-handling during the tool qualification process.
+After making changes and testing them locally with a Sphinx build, create a Pull Request (PR) in the repository.
+
+The PR will be automatically checked, and the documentation will be built in a test run. Afterward, a manual review will be conducted.
+
+Once the review is approved and all CI tests pass, the PR will be merged, and the updated documentation will be deployed.
+
+TI, TD, and TCL Values
+-----------------------
+
+The **Tool Impact (TI)** value is assigned at the ``use case`` level and indicates whether the ``use case`` has a safety-relevant impact:
+- **TI = 2**: Indicates a safety-relevant impact.
+- **TI = 1**: Indicates no safety relevance.
+
+The **Tool Error Detection (TD)** value must be defined for each ``error`` and represents the ability to detect the error:
+- **TD = 1**: The error is detected, and execution stops without producing a final result.
+- **TD = 3**: The error is not detected.
+- **TD = 2**: This value is not used in this document.
+
+The final **Tool Confidence Level (TCL)** is calculated as follows:
+- If **TI = 1**, then **TCL = 1**, and no further actions are required for tool qualification.
+- If **TI = 2**, the highest **TD** value among all linked, safety-relevant features and their errors determines the **TCL**.
+
+A ``use case`` with a **TCL** of **2** or **3** requires special handling during the tool qualification process.
 
 .. list-table::
    :stub-columns: 1
    :header-rows: 1
 
    * - Type
-     - Allowed values
+     - Allowed Values
      - Scope
-     - Manually set?
+     - Manually Set?
    * - TI
      - 1, 2
-     - use case
+     - Use Case
      - Yes
    * - TD
-     - 1, 2, 3
-     - error, feature
+     - 1, 3
+     - Error, Feature
      - Yes
    * - TCL
      - 1, 2, 3
-     - use case
-     - Yes
+     - Use Case
+     - No
