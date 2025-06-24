@@ -27,11 +27,18 @@ version = "1.0"
 
 # List of Sphinx extension to use.
 extensions = [
+    "sphinx.ext.intersphinx",
     "sphinx_needs",
     "sphinx_design",
     "sphinxcontrib.plantuml",
     "sphinx_simplepdf",
 ]
+
+
+intersphinx_mapping = {
+    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
+    "needs": ("https://sphinx-needs.readthedocs.io/en/latest/", None),
+}
 
 ###############################################################################
 # SPHINX-NEEDS Config START
