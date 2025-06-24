@@ -214,6 +214,9 @@ There are several ways to reuse parts of this documentation:
 * Use symbolic links (symlinks) to reference files at the file system
   level.
 
+.. image:: /_static/need_integration.drawio.png
+   :align: center
+   
 For the last two options, integrating this repository as a `git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__
 is recommended. If you use a submodule, ensure that the submodule
 folder is added to the ``exclude_patterns`` configuration option in
