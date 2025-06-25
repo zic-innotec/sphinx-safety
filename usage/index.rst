@@ -165,7 +165,7 @@ quickly create a Sphinx-based documentation project.
 
      mkdir new_project
      cd new_project
-#. Initialize the project with `rye`::
+#. Initialize the project with ``rye``::
 
      rye init
 #. Add Sphinx as a dependency::

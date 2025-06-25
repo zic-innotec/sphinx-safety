@@ -58,6 +58,7 @@ Features
 .. feature:: Check rst files for linting problems
    :id: FE_UBC_LINTING
    :tools: TOOL_UBC
+   :inputs: ART_SPHINX_RST
    :td: 1
 
    .. error:: Not covered format
@@ -81,6 +82,8 @@ Features
 .. feature:: Build needs.json
    :id: FE_UBC_BUILD_JSON
    :tools: TOOL_UBC
+   :inputs: ART_SPHINX_RST
+   :outputs: ART_UBC_NEEDS_JSON
    :td: 3
 
    .. error:: Incomplete data
@@ -107,6 +110,7 @@ Features
 .. feature:: Validate needs.json
    :id: FE_UBC_VALIDATE_JSON
    :tools: TOOL_UBC
+   :inputs: ART_UBC_NEEDS_JSON
    :td: 1
 
    .. error:: Unknown file format
