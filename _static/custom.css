@@ -51,6 +51,13 @@ body[data-theme="dark"] .ubcard div.sd-card-footer {
     background-color: rgba(255, 255, 255, 0.04);
 }
 
+.needs_type_error tr.head td,
+.needs_type_error tr.meta td.meta,
+.needs_type_error tr.content td.content {
+    padding:  3px 15px 3px 10px !important;
+}
+
+
 /* Styling for the https://github.com/pradyunsg/furo theme. */
 /* Styling for the https://github.com/pradyunsg/furo theme. */
 

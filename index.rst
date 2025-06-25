@@ -3,7 +3,6 @@
 
 Introduction
 ============
-
 .. grid::
    :class-row: sd-w-100
 

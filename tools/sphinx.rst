@@ -49,9 +49,25 @@ Sphinx
 Features
 --------
 
+.. dropdown:: 🔍 Features
+
+   .. needtable::
+      :filter: "Sphinx" in sections and type == "feature"
+      :columns: id, title, si as "SI", parent_needs_back as "Errors"
+
+   .. needpie:: Sphinx-Needs features
+      :legend:
+      :labels: Safety impact, No impact, Undefined impact
+      
+      type == "feature" and "Sphinx" in sections and si == "yes"
+      type == "feature" and "Sphinx" in sections and si == "no"
+      type == "feature" and "Sphinx" in sections and si == ""
+
+
 .. feature:: Read-in documents with Sphinx
    :id: FE_SPHINX_READ
    :tools: TOOL_SPHINX
+   :si: yes
 
    Readin all needed rst/md files for the Sphinx project.
 
@@ -76,6 +92,7 @@ Inline Text Formatting
 .. feature:: Italicized (Emphasis) Text
    :id: FE_SPHINX_INLINE_EMPHASIS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use emphasis to italicize text in your documentation.
 
@@ -86,6 +103,7 @@ Inline Text Formatting
 .. feature:: Bold (Strong) Text
    :id: FE_SPHINX_INLINE_STRONG
    :tools: TOOL_SPHINX
+   :si: no
 
    Use strong emphasis to make text bold.
 
@@ -96,6 +114,7 @@ Inline Text Formatting
 .. feature:: Inline Literal (Code) Text
    :id: FE_SPHINX_INLINE_LITERAL
    :tools: TOOL_SPHINX
+   :si: no
 
    Use inline literals to display code or commands inline.
 
@@ -106,6 +125,7 @@ Inline Text Formatting
 .. feature:: Named Hyperlink Reference
    :id: FE_SPHINX_INLINE_NAMED_HYPERLINK
    :tools: TOOL_SPHINX
+   :si: yes
 
    Create a named hyperlink reference to link to external or internal
    resources.
@@ -117,6 +137,7 @@ Inline Text Formatting
 .. feature:: Inline Internal Target
    :id: FE_SPHINX_INLINE_INTERNAL_TARGET
    :tools: TOOL_SPHINX
+   :si: no
 
    Use internal targets to create cross-references within your
    documentation.
@@ -128,6 +149,7 @@ Inline Text Formatting
 .. feature:: Escaped Markup Characters
    :id: FE_SPHINX_INLINE_ESCAPE
    :tools: TOOL_SPHINX
+   :si: no
 
    Escape special characters to display them as plain text.
 
@@ -138,6 +160,7 @@ Inline Text Formatting
 .. feature:: Subscript Role
    :id: FE_SPHINX_ROLE_SUBSCRIPT
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the subscript role to display text as a subscript.
 
@@ -148,6 +171,7 @@ Inline Text Formatting
 .. feature:: Superscript Role
    :id: FE_SPHINX_ROLE_SUPERSCRIPT
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the superscript role to display text as a superscript.
 
@@ -158,6 +182,7 @@ Inline Text Formatting
 .. feature:: Strong Role
    :id: FE_SPHINX_ROLE_STRONG
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the strong role to emphasize text strongly.
 
@@ -168,6 +193,7 @@ Inline Text Formatting
 .. feature:: Emphasis Role
    :id: FE_SPHINX_ROLE_EMPHASIS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the emphasis role to italicize text.
 
@@ -178,6 +204,7 @@ Inline Text Formatting
 .. feature:: Literal Role
    :id: FE_SPHINX_ROLE_LITERAL
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the literal role to display inline code or commands.
 
@@ -188,6 +215,7 @@ Inline Text Formatting
 .. feature:: Code Role
    :id: FE_SPHINX_ROLE_CODE
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the code role to highlight inline code snippets.
 
@@ -198,6 +226,7 @@ Inline Text Formatting
 .. feature:: Inline Math Role
    :id: FE_SPHINX_ROLE_MATH
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the math role to display inline mathematical expressions.
 
@@ -211,6 +240,7 @@ Structural Elements
 .. feature:: Section Titles with Underlines
    :id: FE_SPHINX_STRUCTURE_SECTION_TITLES
    :tools: TOOL_SPHINX
+   :si: no
 
    Use underlines to define section titles in your documentation.
 
@@ -222,6 +252,7 @@ Structural Elements
 .. feature:: Document Title and Subtitle
    :id: FE_SPHINX_STRUCTURE_DOC_TITLE
    :tools: TOOL_SPHINX
+   :si: no
 
    Define a document title and optional subtitle using underlines.
 
@@ -236,6 +267,7 @@ Structural Elements
 .. feature:: Transitions (Horizontal Lines)
    :id: FE_SPHINX_STRUCTURE_TRANSITIONS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use transitions to separate sections visually with horizontal lines.
 
@@ -246,6 +278,7 @@ Structural Elements
 .. feature:: Table of Contents Tree Directive (toctree)
    :id: FE_SPHINX_DIRECTIVE_TOCTREE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the toctree directive to create a table of contents for your
    documentation.
@@ -262,6 +295,7 @@ Structural Elements
 .. feature:: Rubric Directive
    :id: FE_SPHINX_DIRECTIVE_RUBRIC
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the rubric directive to add a styled heading to your
    documentation.
@@ -276,6 +310,7 @@ Lists and Quotes
 .. feature:: Bulleted Lists
    :id: FE_SPHINX_LISTS_BULLETED
    :tools: TOOL_SPHINX
+   :si: no
 
    Use bulleted lists to organize items without a specific order.
 
@@ -288,6 +323,7 @@ Lists and Quotes
 .. feature:: Numbered (Enumerated) Lists
    :id: FE_SPHINX_LISTS_ENUMERATED
    :tools: TOOL_SPHINX
+   :si: no
 
    Use numbered lists to organize items in a specific order.
 
@@ -300,6 +336,7 @@ Lists and Quotes
 .. feature:: Auto-Numbered Lists
    :id: FE_SPHINX_LISTS_AUTO_NUMBERED
    :tools: TOOL_SPHINX
+   :si: no
 
    Use auto-numbered lists to let Sphinx automatically number the items.
 
@@ -312,6 +349,7 @@ Lists and Quotes
 .. feature:: Nested Lists
    :id: FE_SPHINX_LISTS_NESTED
    :tools: TOOL_SPHINX
+   :si: no
 
    Use nested lists to create hierarchical structures.
 
@@ -324,6 +362,7 @@ Lists and Quotes
 .. feature:: Definition Lists
    :id: FE_SPHINX_LISTS_DEFINITION
    :tools: TOOL_SPHINX
+   :si: no
 
    Use definition lists to define terms and their descriptions.
 
@@ -338,6 +377,7 @@ Lists and Quotes
 .. feature:: Option Lists
    :id: FE_SPHINX_LISTS_OPTION
    :tools: TOOL_SPHINX
+   :si: no
 
    Use option lists to document command-line options or similar items.
 
@@ -349,6 +389,7 @@ Lists and Quotes
 .. feature:: Block Quotes
    :id: FE_SPHINX_CONTENT_BLOCKQUOTES
    :tools: TOOL_SPHINX
+   :si: no
 
    Use block quotes to highlight quoted text or important notes.
 
@@ -359,6 +400,7 @@ Lists and Quotes
 .. feature:: Line Blocks
    :id: FE_SPHINX_CONTENT_LINE_BLOCKS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use line blocks to preserve line breaks in text.
 
@@ -374,6 +416,7 @@ Directives for Content
 .. feature:: Image Directive
    :id: FE_SPHINX_DIRECTIVE_IMAGE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the image directive to include images in your documentation.
 
@@ -386,6 +429,7 @@ Directives for Content
 .. feature:: Figure Directive
    :id: FE_SPHINX_DIRECTIVE_FIGURE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the figure directive to include images with captions.
 
@@ -399,6 +443,7 @@ Directives for Content
 .. feature:: Table Directive with Title
    :id: FE_SPHINX_DIRECTIVE_TABLE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the table directive to create tables with titles.
 
@@ -416,6 +461,7 @@ Directives for Content
 .. feature:: Simple Tables
    :id: FE_SPHINX_TABLES_SIMPLE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use simple tables for basic tabular data.
 
@@ -431,6 +477,7 @@ Directives for Content
 .. feature:: Grid Tables
    :id: FE_SPHINX_TABLES_GRID
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use grid tables for more complex table layouts.
 
@@ -447,6 +494,7 @@ Directives for Content
 .. feature:: CSV Table Directive
    :id: FE_SPHINX_DIRECTIVE_CSV_TABLE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the CSV table directive to create tables from CSV files.
 
@@ -459,6 +507,7 @@ Directives for Content
 .. feature:: List Table Directive
    :id: FE_SPHINX_DIRECTIVE_LIST_TABLE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the list table directive to create tables from lists.
 
@@ -477,6 +526,7 @@ Directives for Content
 .. feature:: Code Block Directive
    :id: FE_SPHINX_DIRECTIVE_CODE_BLOCK
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the code block directive to include syntax-highlighted code
    snippets.
@@ -489,6 +539,7 @@ Directives for Content
 .. feature:: Literal Include Directive
    :id: FE_SPHINX_DIRECTIVE_LITERALINCLUDE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the literal include directive to include external code files.
 
@@ -500,6 +551,7 @@ Directives for Content
 .. feature:: Math Directive
    :id: FE_SPHINX_DIRECTIVE_MATH
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the math directive to include mathematical equations.
 
@@ -512,6 +564,7 @@ Directives for Content
 .. feature:: Contents Directive (Local ToC)
    :id: FE_SPHINX_DIRECTIVE_CONTENTS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the contents directive to create a local table of contents.
 
@@ -523,6 +576,7 @@ Directives for Content
 .. feature:: Include Directive
    :id: FE_SPHINX_DIRECTIVE_INCLUDE
    :tools: TOOL_SPHINX
+   :si: yes
 
    Use the include directive to include content from other files.
 
@@ -533,6 +587,7 @@ Directives for Content
 .. feature:: Raw Content Directive
    :id: FE_SPHINX_DIRECTIVE_RAW
    :tools: TOOL_SPHINX
+   :si: no
 
 Directives for Admonitions
 ++++++++++++++++++++++++++
@@ -540,6 +595,7 @@ Directives for Admonitions
 .. feature:: Note Admonition
    :id: FE_SPHINX_ADMONITION_NOTE
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the note admonition to highlight additional information.
 
@@ -552,6 +608,7 @@ Directives for Admonitions
 .. feature:: Warning Admonition
    :id: FE_SPHINX_ADMONITION_WARNING
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the warning admonition to emphasize potential issues or risks.
 
@@ -564,6 +621,7 @@ Directives for Admonitions
 .. feature:: Hint Admonition
    :id: FE_SPHINX_ADMONITION_HINT
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the hint admonition to provide helpful tips or suggestions.
 
@@ -576,6 +634,7 @@ Directives for Admonitions
 .. feature:: Tip Admonition
    :id: FE_SPHINX_ADMONITION_TIP
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the tip admonition to share useful advice.
 
@@ -588,6 +647,7 @@ Directives for Admonitions
 .. feature:: Important Admonition
    :id: FE_SPHINX_ADMONITION_IMPORTANT
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the important admonition to highlight critical information.
 
@@ -600,6 +660,7 @@ Directives for Admonitions
 .. feature:: Attention Admonition
    :id: FE_SPHINX_ADMONITION_ATTENTION
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the attention admonition to draw focus to specific content.
 
@@ -612,6 +673,7 @@ Directives for Admonitions
 .. feature:: Caution Admonition
    :id: FE_SPHINX_ADMONITION_CAUTION
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the caution admonition to warn about potential problems.
 
@@ -624,6 +686,7 @@ Directives for Admonitions
 .. feature:: Error Admonition
    :id: FE_SPHINX_ADMONITION_ERROR
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the error admonition to indicate errors or critical issues.
 
@@ -636,6 +699,7 @@ Directives for Admonitions
 .. feature:: Danger Admonition
    :id: FE_SPHINX_ADMONITION_DANGER
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the danger admonition to highlight severe risks.
 
@@ -648,6 +712,7 @@ Directives for Admonitions
 .. feature:: Generic Admonition
    :id: FE_SPHINX_ADMONITION_GENERIC
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the generic admonition to create custom-styled notes.
 
@@ -663,6 +728,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: External Hyperlinks
    :id: FE_SPHINX_LINK_EXTERNAL
    :tools: TOOL_SPHINX
+   :si: no
 
    Use external hyperlinks to link to external resources.
 
@@ -673,6 +739,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Implicit Hyperlinks from URLs
    :id: FE_SPHINX_LINK_IMPLICIT
    :tools: TOOL_SPHINX
+   :si: no
 
    Use implicit hyperlinks to automatically create links from URLs.
 
@@ -683,6 +750,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Internal Cross-References to Labels
    :id: FE_SPHINX_LINK_INTERNAL_LABELS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use internal cross-references to link to labeled sections.
 
@@ -693,6 +761,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Explicit Target Creation
    :id: FE_SPHINX_LINK_EXPLICIT_TARGET
    :tools: TOOL_SPHINX
+   :si: no
 
    Use explicit targets to create reusable links.
 
@@ -707,6 +776,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Reference Role
    :id: FE_SPHINX_ROLE_REF
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the reference role to create cross-references.
 
@@ -717,6 +787,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Document Role
    :id: FE_SPHINX_ROLE_DOC
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the document role to link to other documents.
 
@@ -727,6 +798,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Numbered Reference Role
    :id: FE_SPHINX_ROLE_NUMREF
    :tools: TOOL_SPHINX
+   :si: no
 
    Use the numbered reference role to create numbered cross-references.
 
@@ -737,6 +809,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Footnotes
    :id: FE_SPHINX_LINK_FOOTNOTES
    :tools: TOOL_SPHINX
+   :si: no
 
    Use footnotes to provide additional information or references.
 
@@ -749,6 +822,7 @@ Hyperlinks and Cross-Referencing
 .. feature:: Citations
    :id: FE_SPHINX_LINK_CITATIONS
    :tools: TOOL_SPHINX
+   :si: no
 
    Use citations to reference external sources.
 
@@ -764,6 +838,7 @@ Output and Build System
 .. feature:: HTML Output
    :id: FE_SPHINX_OUTPUT_HTML
    :tools: TOOL_SPHINX
+   :si: yes
 
    Generate HTML output for your documentation.
 
@@ -774,6 +849,7 @@ Output and Build System
 .. feature:: Single-File HTML Output
    :id: FE_SPHINX_OUTPUT_SINGLE_HTML
    :tools: TOOL_SPHINX
+   :si: yes
 
    Generate a single HTML file for your documentation.
 
@@ -784,6 +860,7 @@ Output and Build System
 .. feature:: Directory HTML Output
    :id: FE_SPHINX_OUTPUT_DIR_HTML
    :tools: TOOL_SPHINX
+   :si: yes   
 
    Generate HTML output with a directory structure.
 
@@ -794,6 +871,7 @@ Output and Build System
 .. feature:: LaTeX Output
    :id: FE_SPHINX_OUTPUT_LATEX
    :tools: TOOL_SPHINX
+   :si: yes
 
    Generate LaTeX output for your documentation.
 
@@ -804,6 +882,7 @@ Output and Build System
 .. feature:: ePub 3 Output
    :id: FE_SPHINX_OUTPUT_EPUB
    :tools: TOOL_SPHINX
+   :si: yes
 
    Generate ePub output for your documentation.
 

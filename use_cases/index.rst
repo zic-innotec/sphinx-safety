@@ -11,8 +11,7 @@ Requirements
    :outputs:
    :tools: TOOL_SPHINX, TOOL_SN, TOOL_UBC
    :features: 
-      FE_SPHINX_READ, FE_SN_READ, FE_SN_CONTENT_RENDER, FE_SN_SET_META, FE_SN_LINK, FE_SN_TABLE,
-      FE_SN_PIE, FE_SN_COUNT
+      FE_SPHINX_READ, FE_SN_READ, FE_SN_CONTENT_RENDER, FE_SN_SET_META, FE_SN_LINK
    :ti: 2
    :tcl: tbd
    :priority: 1

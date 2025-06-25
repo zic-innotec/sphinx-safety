@@ -48,14 +48,14 @@ extra_options = [
     "risklevel",
     "version",
     "ti",
+    "si",
     "td",
     "tcl",
     "priority",
     "company",
     "department",
     "email",
-    "url",
-    
+    "url"  
 ]
 
 # Force the author to set an ID by hand.
