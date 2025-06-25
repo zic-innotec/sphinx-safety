@@ -81,11 +81,11 @@ Features
 .. feature:: Build needs.json
    :id: FE_UBC_BUILD_JSON
    :tools: TOOL_UBC
-   :td: 1
+   :td: 3
 
    .. error:: Incomplete data
       :id: ER_UBC_JSON_INCOMPLETE
-      :td: 2
+      :td: 3
 
       This can have several reasons:
 
