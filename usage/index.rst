@@ -178,8 +178,8 @@ quickly create a Sphinx-based documentation project.
 
      code .
 #. Use this documentation's configuration as a baseline. Copy the
-   following files: 
-   
+   following files:
+
    - ``conf.py`` from https://github.com/useblocks/sphinx-safety/blob/main/conf.py
    - ``pyproject.toml`` from https://github.com/useblocks/sphinx-safety/blob/main/pyproject.toml
    - ``ubproject.toml`` from https://github.com/useblocks/sphinx-safety/blob/main/ubproject.toml
@@ -189,15 +189,12 @@ quickly create a Sphinx-based documentation project.
 #. Sync dependencies::
 
      rye sync
-
 #. Build the documentation::
 
      rye run sphinx-build -b html . _build/html/
-
 #. Open the generated documentation in a browser::
 
      _build/html/index.html
-
 #. Done!
 
 Reuse This Documentation
@@ -216,9 +213,51 @@ There are several ways to reuse parts of this documentation:
 
 .. image:: /_static/need_integration.drawio.png
    :align: center
-   
+
 For the last two options, integrating this repository as a `git submodule <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`__
 is recommended. If you use a submodule, ensure that the submodule
 folder is added to the ``exclude_patterns`` configuration option in
 the ``conf.py`` file to prevent this documentation from being built
 unintentionally.
+
+Include Mechanism
+~~~~~~~~~~~~~~~~~
+
+The following image illustrates the connection between files in this
+Classification project and files in a separately created project.
+
+.. image:: /_static/integration_include.drawio.png
+   :align: center
+
+The Classification files are made locally available using the **git
+submodule** mechanism. The newly created project is stored in parallel
+to the Classification project.
+
+This setup allows the use of the **include** directive. For example,
+to include the file ``own-docs/tools/sphinx/features.rst``, use the
+following:
+
+.. code-block:: rst
+
+   .. include:: /../sphinx/classification/tools/sphinx/features.rst
+
+.. hint::
+
+   It is recommended to copy the folder and file structure of the Sphinx
+   Classification documentation. This ensures that all links and
+   references work without requiring modifications.
+
+The ``.. include::`` directive copies the entire content of the
+specified file into the "extended" version. This includes headlines,
+image directives, and other content.
+
+.. figure:: /_static/include_way_of_working.drawio.png
+   :align: center
+
+   The ``include`` way of working.
+
+This integration method is also used for the :ref:`qualification`.
+This means that an integrated or linked Classification documentation
+can easily be replaced by a link to the Qualification documentation.
+Both projects follow the same folder and file structure, ensuring
+seamless integration.

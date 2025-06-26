@@ -5,7 +5,7 @@
    :maxdepth: 1
    :caption: tools
 
-   sphinx
+   sphinx/index
    sphinx-needs
    sphinx-test-reports
    ubc
