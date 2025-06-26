@@ -8,6 +8,6 @@
    sphinx/index
    sphinx-needs/index
    sphinx-test-reports
-   ubc
+   ubc/index
    ubcode
    ubtrace

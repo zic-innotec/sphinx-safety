@@ -7,7 +7,7 @@ Features
       :filter: "tools/sphinx/" in docname and type == "feature"
       :columns: id, title, si as "SI", parent_needs_back as "Errors"
 
-   .. needpie:: Sphinx-Needs features
+   .. needpie:: Sphinx features
       :legend:
       :labels: Safety impact, No impact, Undefined impact
       
