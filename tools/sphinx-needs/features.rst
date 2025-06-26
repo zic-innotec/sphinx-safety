@@ -1,67 +1,19 @@
-Sphinx-Needs
-============
-
-.. tool:: Sphinx-Needs
-   :id: TOOL_SN
-   :version: 5.1.0, 4.2.0
-   :status: in_progress
-
-   Sphinx makes it easy to create intelligent and beautiful
-   documentation.
-
-   :Documentation: https://www.sphinx-needs.com
-   :Code: https://github.com/useblocks/sphinx-needs
-
-.. dropdown:: 📊 Object analysis
-
-   .. needflow::
-      :filter: "Sphinx-Needs" in sections
-
-   .. needtable::
-      :filter: "Sphinx-Needs" in sections
-      :columns: id, title, type
-
-   .. needpie:: Sphinx-Needs objects
-      :legend:
-      :labels: Features, Errors, Restrictions, Checks, Steps
-      :explode: 0,0,0,0.1,0.1
-
-      type == "feature" and "Sphinx-Needs" in sections
-      type == "error" and "Sphinx-Needs" in sections
-      type == "restriction" and "Sphinx-Needs" in sections
-      type == "check" and "Sphinx-Needs" in sections
-      type == "step" and "Sphinx-Needs" in sections
-
-.. dropdown:: ✅ Compliance statistics
-
-   Features without errors: :need_count:`"Sphinx-Needs" in sections and type == "feature" and len(parent_needs_back) == 0`
-   / :need_count:`"Sphinx-Needs" in sections and type == "feature"`
-
-   Errors without a mitigation: :need_count:`"Sphinx-Needs" in sections and type == "error" and (len(avoids_back) == 0 and len(checks_back) == 0)`
-   / :need_count:`"Sphinx-Needs" in sections and type == "error"`
-
-   Restrictions without error: :need_count:`"Sphinx-Needs" in sections and type == "restriction" and len(avoids) == 0`
-   / :need_count:`"Sphinx-Needs" in sections and type == "restriction"`
-
-   Checks without error: :need_count:`"Sphinx-Needs" in sections and type == "check" and len(checks) == 0`
-   / :need_count:`"Sphinx-Needs" in sections and type == "check"`
-
 Features
---------
+========
 
 .. dropdown:: 🔍 Features
 
    .. needtable::
-      :filter: "Sphinx-Needs" in sections and type == "feature"
+      :filter: "tools/sphinx-needs/" in docname and type == "feature"
       :columns: id, title, si as "SI", parent_needs_back as "Errors"
 
    .. needpie:: Sphinx-Needs features
       :legend:
       :labels: Safety impact, No impact, Undefined impact
       
-      type == "feature" and "Sphinx-Needs" in sections and si == "yes"
-      type == "feature" and "Sphinx-Needs" in sections and si == "no"
-      type == "feature" and "Sphinx-Needs" in sections and si == ""
+      type == "feature" and "tools/sphinx-needs/" in docname and si == "yes"
+      type == "feature" and "tools/sphinx-needs/" in docname and si == "no"
+      type == "feature" and "tools/sphinx-needs/" in docname and si == ""
 
 .. feature:: Read Traceability objects in Sphinx-Needs
    :id: FE_SN_READ
@@ -610,46 +562,3 @@ Exporting & Reporting
    Generate a ``needs.json`` file where each need includes a permalink to
    its location in the HTML documentation. This is useful for linking
    from external tools directly to the requirement definition.
-
-Restrictions
-------------
-
-.. restriction:: Do not use dynamic functions
-   :id: CHECK_SN_NO_DYN
-   :avoids: ER_SN_DYN_INVALID, ER_SN_DYN_WRONG
-
-   Dynamic functions can execute not qualified code, which has full
-   access to all Sphinx-Needs data. So its execution can corrupt the
-   data.
-
-.. restriction:: Warning to Error
-   :id: RE_SN_WARNINGS
-   :avoids: ER_FILES_IGNORED, ER_SN_DATA_INVALID
-
-   Always use the sphinx-build option ``-W`` to transform all warnings
-   into errors, because only errors stop the build and set an exit code >
-   0.
-
-.. restriction:: Clean full build
-   :id: RE_SN_CLEAN
-
-   Always use a **clean** and **full** sphinx-build. An incremental build
-   is not allowed, as not all files get updated by Sphinx.
-
-   So before the ``sphinx-build`` command gets executed, the related ``build``
-   folder shall be deleted. Then ``sphinx-build`` shall be built with the
-   options ``-a`` and ``-E`` to force Sphinx to read and write really all
-   files.
-
-Artifacts
----------
-
-.. artifact:: Sphinx-Needs needs.json file
-   :id: ART_SN_NEEDS_JSON
-
-   A json file containing Sphinx-Needs objects.
-
-   Often used to share requirements and co. in a technical way without
-   the whole documentation project.
-
-   Created during a :need:`TOOL_SPHINX` build.

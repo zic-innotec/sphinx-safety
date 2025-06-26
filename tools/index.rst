@@ -6,7 +6,7 @@
    :caption: tools
 
    sphinx/index
-   sphinx-needs
+   sphinx-needs/index
    sphinx-test-reports
    ubc
    ubcode
