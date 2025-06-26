@@ -30,10 +30,29 @@ table.needs_style_black_bar {
     background: linear-gradient(to right, transparent 98%, #210229 10%);
 }
 
+table.needs_style_tropical_bar {
+    background: linear-gradient(to right, transparent 98%, #a8eae7 10%);
+}
+
 h1, h2, h3, h4 {
     border-bottom: 3px solid #583eff;
     border-radius: 0 !important;
 }
+
+/* div.sidebar-scroll a[href*="#"]{
+    border-right: 5px solid #583eff;
+} */
+div.sidebar-scroll a[href*="features.html"]{
+    border-right: 5px solid #a8d5ba;
+}
+div.sidebar-scroll a[href*="restrictions.html"]{
+    border-right: 5px solid #ffa07a;
+}
+div.sidebar-scroll a[href*="artifacts.html"]{
+    border-right: 5px solid #a8eae7;
+}
+
+
 
 body[data-theme="dark"] h1, 
 body[data-theme="dark"] h2, 

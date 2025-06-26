@@ -114,6 +114,10 @@ predicates = [
     "gray_bar",
   ],
   [
+    "type in ['artifact']",
+    "tropical_bar",
+  ],
+  [
     "type in ['test']",
     "black_bar",
   ],
