@@ -4,7 +4,6 @@ Restrictions
 .. restriction:: Warning to Error
    :id: RE_SPHINX_WARNINGS
    :avoids: ER_FILES_IGNORED, ER_SPH_WRONG_ENCODING, ER_SPH_WRONG_ACCESS
-   :layout: debug
 
    Always use the sphinx-build option ``-W`` to transform all warnings
    into errors, because only errors stop the build and set an exit code >
