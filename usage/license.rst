@@ -3,24 +3,29 @@
 :octicon:`file-badge` License
 =============================
 
-This Sphinx Classification documentation is available under 2 licenses:
+This Sphinx Classification documentation is provided under the MIT
+License.
 
-* GPL3 (default)
-* A properitary license
+You are permitted to copy, modify, distribute, and integrate the
+entire documentation or specific parts of it into your projects.
 
+You are **not required** to make your own work public or release it
+under an Open-Source license.
 
-The ``GPL3`` allows you to make copies, extend the documentation and use it free of charge.
-However, changes and additions needs to be made available under GPL3 as well, by providing it 
-as PR to this project, or by publishing it on your own.
+However, we would greatly appreciate it if new use cases, features, or
+other contributions related to existing tools could be shared back
+with this project.
 
-**useblocks** provides a properitary license, which allows you to keep any modifications 
-for your own and where you are not forced to publish anything.
-This licenses can be retrieved free-of-charge by contacting sales@useblocks.com.
+By contributing, you help others (including other projects within your
+company) save time and effort. Additionally, it allows us to prepare
+the necessary Qualification components for these new elements.
 
-The properitary licenses is also part of the :ref:`qualification` provided by useblocks.
+So please, contribute :octicon:`heart` and become part of our
+safety-focused community :octicon:`person-add`.
 
+License Text (MIT)
+------------------
 
-License text GPL3
------------------
+The full license text is included below:
 
 .. literalinclude:: ../LICENSE
