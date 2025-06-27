@@ -65,6 +65,9 @@ and `Innotec <https://innotecsafety.com/>`__.
    Visit our GitHub repository at https://github.com/useblocks/sphinx-safety/
    to join as a user or contributor.
 
+   The current status and problemeatic entries can seen in
+   :ref:`analysis` and :ref:`completeness`.
+
 Supported Standards
 -------------------
 
