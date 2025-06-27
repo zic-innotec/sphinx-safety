@@ -59,4 +59,4 @@ For details please visit our [Qualification Kit ](https://safety.useblocks.com/u
 
 
 <a href="https://useblocks.com">
-<img style="width:100%" src="_static/sphinx-safety_classi_qualification.drawio.png"></a>
+<img style="max-height: 500px; width:100%" src="_static/sphinx-safety_classi_qualification.drawio.png"></a>
