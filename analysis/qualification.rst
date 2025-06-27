@@ -22,6 +22,9 @@ Overall Features: :need_count:`type=="feature"`
    - * Features without Safety Impact value
      * :need_count:`type == "feature" and si == "" and len(parent_needs_back) == 0`
      * 0
+   - * Features without use case
+     * :need_count:`type == "feature" and len(features_back) == 0`
+     * \-
 
 .. dropdown:: Features without Errors
 
@@ -34,6 +37,12 @@ Overall Features: :need_count:`type=="feature"`
    .. needtable::
       :columns: id, title, tools
       :filter: type == "feature" and si == "" and len(parent_needs_back) == 0
+
+.. dropdown:: Features without use case
+
+   .. needtable::
+      :columns: id, title, si, tools
+      :filter: type == "feature" and len(features_back) == 0
 
 Errors
 ------

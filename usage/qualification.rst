@@ -107,3 +107,8 @@ reviewed during or after its run. Special scripts are available for
 this purpose, which can be integrated into CI pipelines, pre-commit
 hooks, or used with ``ubCode`` to ensure the avoidance of unsafe
 features.
+
+.. figure:: /_static/qualification_method.drawio.png
+   :align: center
+
+   2 independent tool chains as Qualification method
