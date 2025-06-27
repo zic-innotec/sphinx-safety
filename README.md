@@ -43,3 +43,20 @@ maintained by
 <a href="https://innotecsafety.com/">
 <img style="height: 50px;margin: 20px" src="https://innotecsafety.com/wp-content/uploads/2024/10/innotec-logo-tuv-austria-group-e1728416243598-1.png"></a>
 </div>
+
+## Data Model
+This Classification Documentation 
+is using [Sphinx-Needs](https://sphinx-needs.com)
+for modeling und documenting the relation of the needed
+elements for safe tool executions.
+
+It concentrates on the Classification itself, which
+documents mainly tool feature and possible errors during
+their execution.
+
+The Qualification aspects are available as a commercial package.
+For details please visit our [Qualification Kit ](https://safety.useblocks.com/usage/qualification.html)page.
+
+
+<a href="https://useblocks.com">
+<img style="width:100%" src="_static/sphinx-safety_classi_qualification.drawio.png"></a>
