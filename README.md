@@ -36,10 +36,9 @@ More details about Contribution can be find on your
 ## Maintainer
 This Sphinx Classification documentation is
 maintained by
-<div style="background: #333; padding: 5px 20px;text-align:center">
+<div style="padding: 5px 20px;text-align:center">
 <a href="https://useblocks.com">
-<img style="height: 40px;margin: 20px" src="https://useblocks.com/_static/useblocks_white.svg"></a>
+<img style="height: 40px;margin: 20px" src="_static/useblocks_logo.png"></a>
 <a href="https://innotecsafety.com/">
 <img style="height: 50px;margin: 20px" src="https://innotecsafety.com/wp-content/uploads/2024/10/innotec-logo-tuv-austria-group-e1728416243598-1.png"></a>
 </div>
-
