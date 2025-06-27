@@ -1,4 +1,5 @@
-![Sphinx-Classification log](_static/logo_sphinx_classification_light.png)
+<a href="https://useblocks.com">
+<img style="height: 200px; margin: 20px 5px" src="_static/logo_sphinx_classification_light.png"></a>
 
 ## Classifications for Sphinx, Extensions and related tools
 
