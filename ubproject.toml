@@ -55,7 +55,8 @@ extra_options = [
     "company",
     "department",
     "email",
-    "url"  
+    "url",
+    
 ]
 
 # Force the author to set an ID by hand.

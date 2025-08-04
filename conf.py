@@ -78,7 +78,8 @@ exclude_patterns = [
     ".DS_Store",
     ".venv",
     ".ub_cache",
-    "_build"
+    "_build",
+    "**/main.rst"
 ]
 
 # We bring our own plantuml jar file.
