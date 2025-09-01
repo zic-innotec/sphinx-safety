@@ -1,8 +1,8 @@
 
-Codelinks
-============
+Sphinx-CodeLinks
+================
 
-.. tool:: Codelinks
+.. tool:: Sphinx-CodeLinks
    :id: TOOL_SCL
    :version: 1.0.0.
    :status: in_progress
