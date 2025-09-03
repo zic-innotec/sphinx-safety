@@ -24,39 +24,30 @@ Features
 
    .. error:: Syntax errors in rst/md files cause Traceability objects to be ignored
       :id: ER_SN_SYN_ER
-      :td: 1
 
    .. error:: Missing external needs.json file
       :id: ER_SN_JSON_NOT_FOUND
-      :td: 1
 
    .. error:: Corrupted external needs.json file
       :id: ER_SN_JSON_CORRUPTED
-      :td: 1
 
    .. error:: Authentication issues with needsservice
       :id: ER_SN_SER_AUTH
-      :td: 1
 
    .. error:: Invalid meta-data in rst/md files leads to ignored Traceability objects
       :id: ER_SN_DATA_INVALID
-      :td: 1
 
    .. error:: Programmatic errors in rst/md files result in ignored Traceability objects
       :id: ER_SN_CODE_ERR
-      :td: 1
 
    .. error:: Invalid or incorrect filters used for external needs.json
       :id: ER_SN_JSON_FILTER
-      :td: 1
 
    .. error:: External service unreachable by needsservice
       :id: ER_SN_SER_DOWN
-      :td: 1
 
    .. error:: needsservice unable to process data from external service
       :id: ER_SN_SER_INVALID
-      :td: 1
 
 .. feature:: Display Traceability objects content in Sphinx-Needs
    :id: FE_SN_CONTENT_RENDER
@@ -65,7 +56,6 @@ Features
 
    .. error:: Content contains syntax errors
       :id: ER_SN_CONTENT_SYNTAX
-      :td: 1
 
 .. feature:: Assign meta-data to Traceability objects in Sphinx-Needs
    :id: FE_SN_SET_META
@@ -74,11 +64,9 @@ Features
 
    .. error:: Dynamic functions return invalid meta-data
       :id: ER_SN_DYN_INVALID
-      :td: 1
 
    .. error:: Dynamic functions return wrong meta-data
       :id: ER_SN_DYN_WRONG
-      :td: 3
 
       Internal dynamic functions are checked by test-cases in Sphinx-Needs
       itself.
@@ -90,11 +78,9 @@ Features
 
    .. error:: Sphinx-Needs data not valid
       :id: ER_SN_META_INVALID
-      :td: 1
 
    .. error:: Sphinx-Needs data is not process-compliant
       :id: ER_SN_META_NOT_COMPLIANT
-      :td: 1
 
 .. feature:: Establish links between Traceability objects in Sphinx-Needs
    :id: FE_SN_LINK
@@ -103,7 +89,6 @@ Features
 
    .. error:: Back-links are not set
       :id: ER_SN_LINKS_NO_BACK
-      :td: 1
 
       Links are set only in one direction but not in the other.
 
@@ -113,19 +98,15 @@ Features
 
    .. error:: Internal target link is not found
       :id: ER_SN_LINKS_NO_TARGET
-      :td: 1
 
    .. error:: External needs not found
       :id: ER_SN_LINKS_NO_EXT
-      :td: 1
 
    .. error:: External needs corrupted
       :id: ER_SN_LINKS_EXT_COR
-      :td: 1
 
    .. error:: Links missing
       :id: ER_SN_LINKS_MISSING
-      :td: 1
 
       Set links are not treated correctly and are not part of the final
       documentation.
@@ -140,14 +121,12 @@ Features
 
    .. error:: Meta-data missing
       :id: ER_SN_LAY_META_MIS
-      :td: 1
 
       Needed meta-data is not part of the final representation in the
       doctree and so later HTML/PDF build
 
    .. error:: Wrong meta-data is used
       :id: ER_SN_LAY_META_WRONG
-      :td: 1
 
       Sphinx-Needs is adding wrong Meta-Data to the final doctree-layout
 
@@ -158,11 +137,9 @@ Features
 
    .. error:: Objects missing in needs.json
       :id: ER_SN_JSON_MIS
-      :td: 1
 
    .. error:: Traceability objects meta-data corrupted
       :id: ER_SN_JSON_COR
-      :td: 1
 
 Dynamic Content
 +++++++++++++++
@@ -174,20 +151,17 @@ Dynamic Content
 
    .. error:: Function gets not executed
       :id: ER_SN_DYN_NO_EXEC
-      :td: 1
 
       The function gets not executed and in the generated documentation the
       dynamic-function string can be found.
 
    .. error:: Function returns invalid value
       :id: ER_SN_DYN_INVALID2
-      :td: 1
 
       Function returns a technically not allowed value.
 
    .. error:: Function returns wrong calculated values
       :id: ER_SN_DYN_WRONG_CALC
-      :td: 3
 
       The dynamic functions calculates wrong values
 

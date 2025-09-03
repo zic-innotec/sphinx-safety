@@ -25,18 +25,15 @@ Features
 
    .. error:: Needed folders/files are ignored
       :id: ER_FILES_IGNORED
-      :td: 1
 
       Error is logged by Sphinx and with build-option ``-W`` this warning
       gets thrown as error and stops the build.
 
    .. error:: Needed files/folders have not supported encoding
       :id: ER_SPH_WRONG_ENCODING
-      :td: 1
 
    .. error:: Access to files/folders not given
       :id: ER_SPH_WRONG_ACCESS
-      :td: 1
 
 Inline Text Formatting
 ++++++++++++++++++++++

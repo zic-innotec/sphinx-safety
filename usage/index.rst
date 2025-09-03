@@ -88,6 +88,8 @@ Features are stored in tool-specific folders, such as ``/tools/sphinx/``.
          :id: ER_SN_JSON_NOT_FOUND                 <- Unique ID
          :td: 3                                    <- Tool Error Detection level
 
+.. hint:: The ``td`` option is only available in the Qualification package.
+
 Restrictions
 ++++++++++++
 

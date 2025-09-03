@@ -19,27 +19,22 @@ Features
    :id: FE_UBC_LINTING
    :tools: TOOL_UBC
    :inputs: ART_SPHINX_RST
-   :td: 1
    :si: no
 
    .. error:: Not covered format
       :id: ER_UBC_LINTING_NOT_COVERED
-      :td: 1
 
 .. feature:: Format rst files
    :id: FE_UBC_FORMAT
    :tools: TOOL_UBC
-   :td: 1
    :si: yes
 
    .. error:: Format introduces errors
       :id: ER_UBC_FORMAT_ERRORS
-      :td: 1
 
 .. feature:: Clean internal caches
    :id: FE_UBC_CACHE
    :tools: TOOL_UBC
-   :td: 1
    :si: no
 
 .. feature:: Build needs.json
@@ -47,12 +42,10 @@ Features
    :tools: TOOL_UBC
    :inputs: ART_SPHINX_RST
    :outputs: ART_UBC_NEEDS_JSON
-   :td: 3
    :si: yes
 
    .. error:: Incomplete data
       :id: ER_UBC_JSON_INCOMPLETE
-      :td: 3
 
       This can have several reasons:
 
@@ -75,16 +68,13 @@ Features
    :id: FE_UBC_VALIDATE_JSON
    :tools: TOOL_UBC
    :inputs: ART_UBC_NEEDS_JSON
-   :td: 1
    :si: no
 
    .. error:: Unknown file format
       :id: ER_UBC_VAL_FORMAT
-      :td: 1
 
    .. error:: Incomplete Validation
       :id: ER_UBC_VAL_INCOMPLETE
-      :td: 1
 
       Not all types and options, which are represetned in a given needs.json
       file, are known/defined by the ``ubproject.toml`` configuration.
