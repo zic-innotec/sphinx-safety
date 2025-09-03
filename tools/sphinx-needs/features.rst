@@ -141,6 +141,13 @@ Features
    .. error:: Traceability objects meta-data corrupted
       :id: ER_SN_JSON_COR
 
+   .. error:: Traceability objects links corrupted
+      :id: ER_SN_JSON_LINKS_COR
+
+   .. error:: Traceability objects content corrupted
+      :id: ER_SN_JSON_CONTENT_COR
+      
+
 Dynamic Content
 +++++++++++++++
 
@@ -165,15 +172,55 @@ Dynamic Content
 
       The dynamic functions calculates wrong values
 
+   .. error:: Function returns no value
+      :id: ER_SN_DYN_NO_VALUE
+
+      The dynamic function does not return a value, so the meta-data is not
+      set.
+
 .. feature:: Extend page content with templates in Sphinx-Needs
    :id: FE_SN_TEMPLATE_PAGE
    :tools: TOOL_SN
    :si: yes
 
+   .. error:: Template file not found
+      :id: ER_SN_TEMPLATE_FILE_NOT_FOUND
+
+      The template file is not found in the Sphinx-Needs templates directory.
+
+   .. error:: Template file is not a valid Jinja2 template
+      :id: ER_SN_TEMPLATE_FILE_INVALID
+
+      The template file is not a valid Jinja2 template, so it cannot be
+      processed by Sphinx-Needs.
+
+   .. error:: Template file contains syntax errors
+      :id: ER_SN_TEMPLATE_FILE_SYNTAX
+
+      The template file contains syntax errors and cannot be processed by
+      Sphinx-Needs.
+
 .. feature:: Enhance Need content using templates in Sphinx-Needs
    :id: FE_SN_TEMPLATE_NEED
    :tools: TOOL_SN
    :si: yes
+
+   .. error:: Template file not found
+      :id: ER_SN_TEMPLATE_NEED_FILE_NOT_FOUND
+
+      The template file is not found in the Sphinx-Needs templates directory.
+
+   .. error:: Template file is not a valid Jinja2 template
+      :id: ER_SN_TEMPLATE_NEED_FILE_INVALID
+
+      The template file is not a valid Jinja2 template, so it cannot be
+      processed by Sphinx-Needs.
+
+   .. error:: Template file contains syntax errors
+      :id: ER_SN_TEMPLATE_NEED_FILE_SYNTAX
+
+      The template file contains syntax errors and cannot be processed by
+      Sphinx-Needs.
 
 Core Need Object
 ++++++++++++++++
@@ -217,6 +264,24 @@ Core Need Object
          :author: John Doe
          :component: UI
 
+   .. error:: Invalid option used in a need
+      :id: ER_SN_INVALID_OPTION
+
+      If an option is not defined in the configuration, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: Option value is not valid
+      :id: ER_SN_INVALID_OPTION_VALUE
+
+      If an option value does not match the expected format or type, Sphinx-Needs
+      will raise an error during the build process.
+
+   .. error:: Option value is not allowed
+      :id: ER_SN_OPTION_NOT_ALLOWED
+
+      If an option value is not allowed by the configuration, Sphinx-Needs will
+      raise an error during the build process.
+
 .. feature:: Customizable link types
    :id: FE_SPHINX_NEEDS_CUSTOMIZABLE_LINKS
    :tools: TOOL_SN
@@ -241,6 +306,18 @@ Core Need Object
           }
       ]
 
+   .. error:: Invalid link type used in a need
+      :id: ER_SN_INVALID_LINK_TYPE
+
+      If a link type is not defined in the configuration, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: Link type value is not valid
+      :id: ER_SN_INVALID_LINK_TYPE_VALUE
+
+      If a link type value does not match the expected format or type, Sphinx-Needs
+      will raise an error during the build process.
+
 .. feature:: Automatic ID generation
    :id: FE_SPHINX_NEEDS_AUTO_ID
    :tools: TOOL_SN
@@ -255,6 +332,30 @@ Core Need Object
       .. req:: This requirement will get an ID automatically.
          :tags: auto_id
 
+   .. error:: ID generation failed
+      :id: ER_SN_ID_GENERATION_FAILED
+
+      If the automatic ID generation fails, Sphinx-Needs will raise an error
+      during the build process.
+
+   .. error:: ID already exists
+      :id: ER_SN_ID_ALREADY_EXISTS
+
+      If the generated ID already exists in the project, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: ID format is invalid
+      :id: ER_SN_ID_FORMAT_INVALID
+
+      If the generated ID does not match the expected format, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: ID length is invalid
+      :id: ER_SN_ID_LENGTH_INVALID
+
+      If the generated ID does not match the expected length, Sphinx-Needs will
+      raise an error during the build process.
+
 .. feature:: Manual ID assignment
    :id: FE_SPHINX_NEEDS_MANUAL_ID
    :tools: TOOL_SN
@@ -267,6 +368,24 @@ Core Need Object
 
       .. req:: A requirement with a specific ID
          :id: R_IMPORTANT_FEATURE
+
+   .. error:: Manual ID already exists
+      :id: ER_SN_MANUAL_ID_EXISTS
+
+      If a manually set ID already exists in the project, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: Manual ID format is invalid
+      :id: ER_SN_MANUAL_ID_FORMAT_INVALID
+
+      If a manually set ID does not match the expected format, Sphinx-Needs will
+      raise an error during the build process.
+
+   .. error:: Manual ID length is invalid
+      :id: ER_SN_MANUAL_ID_LENGTH_INVALID
+
+      If a manually set ID does not match the expected length, Sphinx-Needs will
+      raise an error during the build process.
 
 .. feature:: Need status enforcement
    :id: FE_SPHINX_NEEDS_STATUS_ENFORCEMENT
@@ -286,6 +405,12 @@ Core Need Object
           ('closed', 'Is closed'),
           ('rejected', 'Will not be implemented'),
       ]
+
+   .. error:: Invalid status used in a need
+      :id: ER_SN_INVALID_STATUS
+
+      If a need uses a status that is not defined in the configuration,
+      Sphinx-Needs will raise an error during the build process.
 
 .. feature:: Tagging support
    :id: FE_SPHINX_NEEDS_TAGGING
@@ -329,6 +454,12 @@ Core Need Object
    Sphinx-Needs automatically checks if all manually set IDs are unique
    across the project. The build will fail if a duplicate ID is found,
    ensuring data consistency.
+
+   .. error:: Duplicate ID is not detected
+      :id: ER_SN_DUPLICATE_ID
+
+      If a duplicate ID is not detected, it may lead to incorrect traceability
+      and data integrity issues. 
 
 Directives for Creating & Displaying Needs
 ++++++++++++++++++++++++++++++++++++++++++
@@ -405,6 +536,27 @@ Directives for Creating & Displaying Needs
 
       .. needimport:: ../../shared/output/needs.json
 
+   .. error:: Importing needs is not completed
+      :id: ER_SN_IMPORT_NOT_COMPLETED
+      
+
+      If the import process is not completed, it may lead to missing or
+      incomplete data in the project.
+
+   .. error:: Importing needs is not valid
+      :id: ER_SN_IMPORT_NOT_VALID
+      
+
+      If the imported data is not valid, it may lead to errors in the
+      documentation or incorrect traceability.
+
+   .. error:: Importing needs is not accessible
+      :id: ER_SN_IMPORT_NOT_ACCESSIBLE
+      
+
+      If the imported file is not accessible, it may lead to errors in the
+      documentation or missing data.
+
 .. feature:: Modify existing needs in bulk (needextend)
    :id: FE_SPHINX_NEEDS_DIRECTIVE_NEEDEXTEND
    :tools: TOOL_SN
@@ -417,6 +569,27 @@ Directives for Creating & Displaying Needs
 
       .. needextend:: status == 'in_progress'
          :add_tags: sprint_5
+
+   .. error:: Bulk modification of needs is not completed
+      :id: ER_SN_EXTEND_NOT_COMPLETED
+      
+
+      If the bulk modification process is not completed, it may lead to
+      missing or incomplete data in the project.
+
+   .. error:: Bulk modification failes silently
+      :id: ER_SN_EXTEND_FAIL_SILENTLY
+      
+
+      If the bulk modification fails silently, it may lead to missing or
+      incomplete data in the project without any error message.
+
+   .. error:: Bulk modification of needs is not valid
+      :id: ER_SN_EXTEND_NOT_VALID
+      
+
+      If the bulk modification is not valid, it may lead to errors in the
+      documentation or incorrect traceability.
 
 Linking and Traceability
 ++++++++++++++++++++++++
@@ -438,6 +611,20 @@ Linking and Traceability
          :id: R_LOGIN_COLOR
          :links: S_LOGIN_BUTTON
 
+   .. error:: Link target not found
+      :id: ER_SN_LINK_TARGET_NOT_FOUND
+      
+
+      If a link target is not found, it may lead to missing traceability
+      and incorrect documentation.
+
+   .. error:: Link target is not valid
+      :id: ER_SN_LINK_TARGET_NOT_VALID
+      
+
+      If a link target is not valid, it may lead to errors in the
+      documentation or incorrect traceability.
+
 .. feature:: Bidirectional link tracking
    :id: FE_SPHINX_NEEDS_LINKING_BIDIRECTIONAL
    :tools: TOOL_SN
@@ -455,6 +642,20 @@ Linking and Traceability
    The Sphinx build will issue a warning if a need links to an ID that
    does not exist. This helps to maintain the integrity of the
    traceability data.
+
+   .. error:: Dead link not detected
+      :id: ER_SN_DEAD_LINK_NOT_DETECTED
+      
+
+      If a dead link is not detected, it may lead to missing traceability
+      and incorrect documentation.
+
+   .. error:: Dead link false positive
+      :id: ER_SN_DEAD_LINK_FALSE_POSITIVE
+      
+
+      If a dead link is falsely reported, it may lead to unnecessary warnings
+      and confusion in the documentation.
 
 Automated Features
 ++++++++++++++++++
@@ -478,6 +679,37 @@ Automated Features
               "filter": "'req' in tags"
           }
       }
+
+   .. error:: Constraint not checked during build
+      :id: ER_SN_CONSTRAINT_NOT_CHECKED
+
+      If a constraint is not checked during the build, it may lead to
+      missing or incorrect traceability data.
+
+   .. error:: Constraint check fails silently
+      :id: ER_SN_CONSTRAINT_FAIL_SILENTLY
+
+      If a constraint check fails silently, it may lead to missing or
+      incorrect traceability data without any error message.
+
+   .. error:: Constraint check runs with wrong data
+      :id: ER_SN_CONSTRAINT_WRONG_DATA
+
+      If a constraint check runs with wrong data, it may lead to incorrect
+      traceability data and errors in the documentation.
+
+   .. error:: Constraint check runs with incomplete data
+      :id: ER_SN_CONSTRAINT_INCOMPLETE_DATA
+      
+
+      If a constraint check runs with incomplete data, it may lead to
+      missing or incorrect traceability data and errors in the documentation.
+
+   .. error:: Constraint check runs with invalid data
+      :id: ER_SN_CONSTRAINT_INVALID_DATA
+
+      If a constraint check runs with invalid data, it may lead to errors in
+      the documentation or incorrect traceability.
 
 Configuration & Customization
 +++++++++++++++++++++++++++++
@@ -512,6 +744,24 @@ Configuration & Customization
           }
       }
 
+   .. error:: Layout leads to incorrect rendering
+      :id: ER_SN_LAYOUT_INCORRECT_RENDERING
+
+      If a layout leads to incorrect rendering, it may cause confusion in the
+      documentation and make it hard to read.
+
+   .. error:: Layout leads to missing information
+      :id: ER_SN_LAYOUT_MISSING_INFO
+
+      If a layout leads to missing information, it may cause confusion in the
+      documentation and make it hard to read.
+
+   .. error:: Layout leads to incorrect information
+      :id: ER_SN_LAYOUT_INCORRECT_INFO
+
+      If a layout leads to incorrect information, it may cause confusion in the
+      documentation and make it hard to read.
+
 Exporting & Reporting
 +++++++++++++++++++++
 
@@ -528,6 +778,24 @@ Exporting & Reporting
 
       sphinx-build -b needs . _build
 
+   .. error:: Exporting needs.json fails silently
+      :id: ER_SN_EXPORT_JSON_FAIL_SILENTLY
+
+      If the export fails silently, it may lead to missing or incomplete data
+      in the project without any error message.
+
+   .. error:: Exported needs.json file is not valid
+      :id: ER_SN_EXPORT_JSON_NOT_VALID
+
+      If the exported needs.json file is not valid, it may lead to errors in
+      the documentation or incorrect traceability. 
+
+   .. error:: Exported needs.json file is corrupted
+      :id: ER_SN_EXPORT_JSON_CORRUPTED
+
+      If the exported needs.json file is corrupted, it may lead to errors in
+      the documentation or incorrect traceability.
+
 .. feature:: Permalink generation to specific need objects
    :id: FE_SPHINX_NEEDS_EXPORT_PERMALINKS
    :tools: TOOL_SN
@@ -536,3 +804,28 @@ Exporting & Reporting
    Generate a ``needs.json`` file where each need includes a permalink to
    its location in the HTML documentation. This is useful for linking
    from external tools directly to the requirement definition.
+
+   .. error:: Permalink generation fails silently
+      :id: ER_SN_PERMALINK_FAIL_SILENTLY
+      
+
+      If the permalink generation fails silently, it may lead to missing or
+      incomplete data in the project without any error message.
+
+   .. error:: Permalink is not valid
+      :id: ER_SN_PERMALINK_NOT_VALID
+
+      If the permalink is not valid, it may lead to errors in the
+      documentation or incorrect traceability.
+
+   .. error:: Permalink links to non-existing need
+      :id: ER_SN_PERMALINK_NON_EXISTING
+
+      If the permalink links to a non-existing need, it may lead to errors in
+      the documentation or incorrect traceability.
+
+   .. error:: Permalink links to wrong need
+      :id: ER_SN_PERMALINK_WRONG_NEED
+
+      If the permalink links to the wrong need, it may lead to errors in the
+      documentation or incorrect traceability.
