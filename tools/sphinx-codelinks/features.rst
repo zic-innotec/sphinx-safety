@@ -18,7 +18,6 @@ Features
 .. feature:: Define new traceability objects in source code
     :id: FE_SCL_DEF
     :tools: TOOL_SCL
-    :si: yes
 
     Create new Sphinx-Needs directly from a single comment line in your source code.
 
@@ -31,7 +30,6 @@ Features
 .. feature:: C Language Support
     :id: FE_SCL_C
     :tools: TOOL_SCL
-    :si: yes
 
     Support for defining traceability objects in C source code.
 
@@ -44,7 +42,6 @@ Features
 .. feature:: C++ Language Support
     :id: FE_SCL_CPP
     :tools: TOOL_SCL
-    :si: yes
 
     Support for defining traceability objects in C++ source code.
 
@@ -57,7 +54,6 @@ Features
 .. feature:: Python Language Support
     :id: FE_SCL_PY
     :tools: TOOL_SCL
-    :si: yes
 
     Support for defining traceability objects in Python source code.
 
@@ -70,7 +66,6 @@ Features
 .. feature:: Customized comment styles
     :id: FE_SCL_CMT
     :tools: TOOL_SCL
-    :si: no
 
     Support for different customized comment styles in source code.
     The comment structure can be defined in the configuration file.
@@ -81,7 +76,6 @@ Features
 .. feature:: Link code to existing need items
     :id: FE_SCL_LNK
     :tools: TOOL_SCL
-    :si: yes
 
     Link code to existing need items without creating new ones, perfect for tracing
     implementations to requirements.
@@ -95,7 +89,6 @@ Features
 .. feature:: Extract blocks of reStructuredText embedded within comments
     :id: FE_SCL_RST_EXTRACTION
     :tools: TOOL_SCL
-    :si: yes
 
     Extract blocks of reStructuredText embedded within comments, allowing you to
     include rich documentation with associated metadata right next to your code.
@@ -109,13 +102,47 @@ Features
     .. error:: Extracted reStructuredText blocks are malformed
        :id: ERR_SCL_RST_EXTRACTION_3
 
-.. feature:: CLI interface
-    :id: FE_SCL_CLI
+.. feature:: Analyze marked content via CLI interface
+    :id: FE_SCL_CLI_ANALYZE
     :tools: TOOL_SCL
-    :si: yes
 
-    Provide a CLI for users to integrate documentation builds into CI/CD
-    pipelines and for local development.
+    It shall be possible to analyze marked content via the CLI interface.
 
     .. error:: CLI integration fails silently
-       :id: ERR_SCL_CLI_1
+       :id: ERR_SCL_CLI_ANALYZE_1
+
+    .. error:: Sphinx-codelinks halucinates marked content
+       :id: ERR_SCL_CLI_ANALYZE_2
+
+    .. error:: Sphinx-codelinks misses marked content
+       :id: ERR_SCL_CLI_ANALYZE_3
+
+.. feature:: Discover the filepaths a specified root directory via CLI interface
+    :id: FE_SCL_CLI_DISCOVER
+    :tools: TOOL_SCL
+
+    It shall be possible to specify a root directory for the CLI interface.
+    All files in and below this directory shall be discovered.
+
+    .. error:: Specifying a root directory fails
+       :id: ERR_SCL_CLI_DISCOVER_1
+
+    .. error:: Sphinx-codelinks discovers files outside the specified root directory
+       :id: ERR_SCL_CLI_DISCOVER_2
+
+       Root directory setting is not respected or ignored
+
+.. feature:: Export marked content to other formats via CLI interface
+    :id: FE_SCL_CLI_WRITE
+    :tools: TOOL_SCL
+
+    It shall be possible to export marked content to other formats via the CLI interface.
+
+    .. error:: Exporting marked content fails
+       :id: ERR_SCL_CLI_WRITE_1
+
+    .. error:: Sphinx-codelinks exports wrong content
+       :id: ERR_SCL_CLI_WRITE_2
+
+    .. error:: Exported content is malformed
+       :id: ERR_SCL_CLI_WRITE_3
